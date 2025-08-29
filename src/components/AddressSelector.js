@@ -13,7 +13,7 @@ function AddressSelector({ addresses, selected, onSelect }) {
       <select
         value={selected}
         onChange={(e) => onSelect(e.target.value)}
-        className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-primary"
+        className="w-full px-4 py-3 rounded-lg text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 focus:outline-none"
       >
         <option value="">Please choose...</option>
         {addresses.map((addr, idx) => (

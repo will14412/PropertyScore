@@ -32,7 +32,7 @@ function HomePage() {
               value={postcode}
               onChange={(e) => setPostcode(e.target.value)}
               placeholder="e.g. SK9 5AE"
-              className="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+              className="flex-grow px-4 py-3 rounded-lg text-white placeholder-gray-200 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 focus:outline-none"
             />
             <button
               onClick={handleProceed}
