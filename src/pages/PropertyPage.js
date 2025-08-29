@@ -31,13 +31,12 @@ const PropertyPage = () => {
         if (data && data.addresses) {
           // Map the API response into user friendly strings
           const formatted = data.addresses.map((item) => {
-            // The API returns an object with lines, town, county and postcode
+            // The API returns properties like line_1, line_2, locality, town_or_city, county and postcode
+            // Collect all available parts so the full address is displayed rather than just town and county
             const lines = [];
-            if (item.address_line_1) lines.push(item.address_line_1);
-            if (item.address_line_2) lines.push(item.address_line_2);
-            if (item.town_or_city) lines.push(item.town_or_city);
-            if (item.county) lines.push(item.county);
-            if (item.postcode) lines.push(item.postcode);
+            ['line_1', 'line_2', 'line_3', 'line_4', 'locality', 'town_or_city', 'county', 'postcode'].forEach((key) => {
+              if (item[key]) lines.push(item[key]);
+            });
             return lines.join(', ');
           });
           setAddresses(formatted);

@@ -40,7 +40,7 @@ function LoginPage({ onLogin }) {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
             required
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full px-4 py-3 rounded-lg text-white placeholder-gray-200 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 focus:outline-none"
           />
           <input
             type="password"
@@ -48,7 +48,7 @@ function LoginPage({ onLogin }) {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
             required
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full px-4 py-3 rounded-lg text-white placeholder-gray-200 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 focus:outline-none"
           />
           <button
             type="submit"
