@@ -397,7 +397,7 @@ const PropertyPage = () => {
           Postcode: <strong>{postcode}</strong>
         </p>
         {/* Address selector. Display this until the user picks an address. */}
-        {addresses.length > 0 && !selectedAddress && (
+        {addresses.length > 0 && (
           <div className="mb-6">
             <AddressSelector
               addresses={addresses}
@@ -420,6 +420,11 @@ const PropertyPage = () => {
             <div className="flex-grow">
               {loading && (
                 <p className="text-gray-600 mb-4">Fetching data…</p>
+              )}
+              {!loading && Object.keys(results).length === 0 && (
+                <p className="text-gray-600 mb-4">
+                  No data loaded yet. Select an address and click "Fetch property data".
+                </p>
               )}
               {!loading && Object.keys(results).length > 0 && (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
